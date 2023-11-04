@@ -12,5 +12,6 @@
 5.Program will calculate and show result 
 
 6.Program ask to do another transection?
- 6.1 If yes, Program will working
- 6.2 If no, Program wil finsih
+* 6.1 If yes, Program will working
+* 6.2 If no, Program wil finish
+
