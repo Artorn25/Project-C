@@ -1,7 +1,5 @@
-# Project-C
-Program about Material exchange to money
-
-How to use Program
+# Program about Material exchange to money
+## How to use Program
 
 1.Register 
 
