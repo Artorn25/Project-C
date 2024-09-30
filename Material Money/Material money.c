@@ -158,16 +158,11 @@ void login(){
 	scanf("%s",&pass);
 	printf("\n\n\n");
 	while(fscanf(re,"%s",userID)&&fscanf(re,"%s",password)){
-		// fgets(userID,10,fl)&&fgets(pass,10,fl)
-		// fread(&p,sizeof(struct point),1,input)
-	    //fscanf(fl,"%s",userID)&&fscanf(fl,"%s",password)
 		if(strcmp(user,userID)==0 && strcmp(pass,password)==0){
 			count=1;
 			break;
 			system("CLS");
-		} else if(feof(re)){
-			break;
-		}
+		} else if(feof(re)){ break; }
 }
 	fclose(re);
 	if(count==1){
@@ -195,8 +190,6 @@ void regis(){
 	printf("\n\n\n");
 
 	fprintf(re,"%s\n%s\n ",user,pass);
-	//fprintf(fl,"%s \n",&rpassword);
-	//fl<<regisID<<' '<<rpassword<<endl;
 	printf("\t\t\t\t\t\t\t\t Register is successful \n");
 	Sleep(1000);
 	system("CLS");
@@ -206,7 +199,6 @@ void regis(){
 
 // Interface
 void Interface(){
-	//printf("\t\t\t\t\t \n\n\n\n");
 	printf("                                                                                               #######                                                                                        \n");
 	printf("                                                                                             ###########                                                                                      \n");
     printf("                                                                                           ##### $$$ #####                                                                                    \n");
@@ -240,7 +232,6 @@ void Interface(){
     printf("                                                                                                        ###                                                                                   \n");
     printf("                                                                                                          #                                                                                   \n");
 	printf("\t\t\t\t\t\t \n");
-	//printf("\t\t\t\t\t \n\n\n\n");
 	printf("\t\t\t\t\t\t\t\t--------------------\n");
 	printf("\t\t\t\t\t\t\t\t|                   |\n");
 	printf("\t\t\t\t\t\t\t\t|  [1] Login        |\n");
@@ -254,7 +245,6 @@ void Interface(){
     printf("\t\t\t\t\t\t\t\t|  [3] Quit         | \n");
 	printf("\t\t\t\t\t\t\t\t|                   |\n");
 	printf("\t\t\t\t\t\t\t\t--------------------\n");
-//	printf("\t\t\t\t\t\t\t\t|                   |\n");
     printf("\t\t\t\t\t\t\t\t Select to lists: ");
 	
 }
@@ -296,15 +286,6 @@ void Change(float BottlePlasticWhite,float BottlePlasticTurbid,float BottlePlast
     Cd = fopen("costCd.txt","a+");
     Dvd = fopen("costDvd.txt","a+");
     
-    /*FILE*BWP;
-FILE*BWP;
-FILE*BPT;
-FILE*BPC;
-FILE*SC;
-FILE*PAB;
-FILE*BZ;
-FILE*CDD;
-FILE*DVDD;*/
     BWP = fopen("amonutBWP.txt","a+");
     BPT = fopen("amonutBPT.txt","a+");
     BPC = fopen("amonutBPC.txt","a+");
@@ -1101,52 +1082,3 @@ void Check(float BottlePlasticWhite,float BottlePlasticTurbid,float BottlePlasti
     printf("Total of DVD disk to changed: %.2f kg\n", sum8);
     fclose(DVDD);
 	}
-        
-/*	char a[80],p[80],o[80],q[80],t[80],s[80],pa[80],n[80];
-	Pl = fopen("costPl.txt","r");
-    Scr = fopen("costScr.txt","r");
-    Pa = fopen("costPa.txt","r");
-    //ro = fopen("round.txt","r");
-	//fgets ( check, 50 , stdin );
-		while( fgets(p, 80 , Pl) != NULL ){
-			strsub(a,p,50,52);
-		double d = strtod(a,&q);
-		printf( "Total Bottle white Plastic to changed = %.2f Kg\n",d) ;		
-			
-			
-			//printf("a = %s\n",a);
-			//printf( "%s \n",&q) ;
-			//d += d;
-	///	printf( "Total Plastics to changed = %.2f Kg\n",d) ;
-		//	if(strcasecmp(p,"Kg")==0){
-			//}else if(strcasecmp(p,"Kg")!=0){
-			//}
-		//	printf( "q = %f",q) ;	
-        }
-		fclose(Pl);
-        while( fgets(s, 80 , Scr) != NULL ){
-        strsub(t,s,48,50);
-			//printf("t = %s\n",t);
-			double w = strtod(t,&o);
-			//printf( "%s \n",&q) ;
-			//w += w;
-		printf( "Total Scrap to changed = %.2f Kg\n",w) ;
-		//	printf( "%.2f",w) ;
-        }
-		fclose(Scr);
-        while( fgets(pa, 80 , Pa) != NULL ){
-			strsub(n,pa,48,50);
-			double a = strtod(n,&pa);
-		//	printf( "%.2f",pa) ;
-			printf( "Total Paper to changed = %.2f Kg\n",a) ;
-        }fclose(Pa);
-	//	while( fgets ( check, 50 , stdin ) != NULL )
-        //{
-       
-    //    }
-       // fclose(ro);*/
-	
-/*void strsub(char *dest,char*src,size_t beginIndex,size_t endIndex){
-	strncpy(dest, src + beginIndex, endIndex - beginIndex);
-	dest[endIndex - beginIndex] ='\0';
-}*/
